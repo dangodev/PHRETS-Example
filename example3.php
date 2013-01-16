@@ -12,9 +12,9 @@ if($connect) {
 	
 	/* Search RETS server */
 	$search = $rets->SearchQuery(
-		'Property',
-		4,
-		'((112='.$sixmonths.'+),(178=ACT))',
+		'Property',								// Resource
+		4,										// Class
+		'((112='.$sixmonths.'+),(178=ACT))',	// DMQL, with SystemNames
 		array(
 			'Format'	=> 'COMPACT-DECODED',
 			'Select'	=> 'sysid,49,112,175,9,2302,2304',
